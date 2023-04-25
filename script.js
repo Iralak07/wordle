@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             INPUT.addEventListener('input', (event)=>{
                 event.preventDefault();
                 let caracteres = INPUT.value;
-                if(/^[a-z]{5}$/.test(caracteres)){
+                if(/^[a-zA-Z]{5}$/.test(caracteres)){
                     BUTTON.removeAttribute('disabled');
                 }else{
                     BUTTON.setAttribute('disabled', true)
