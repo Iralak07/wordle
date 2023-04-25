@@ -9,12 +9,14 @@
     <div class="container">
         <div id="intentos">
             <div class="content">
-                <h1><span style="color: green">W</span><span style="color: yellow">o</span>r<span style="color: #A459D1 ">d</span><span>l</span><span style="color:green">e</span></h1>
+                <h1 id="titulo"><span style="color: green">W</span><span style="color: yellow">o</span>r<span style="color: #A459D1 ">d</span><span>l</span><span style="color:green">e</span></h1>
+                <p id="adivinar">Ingresa una palabra con cinco (5) caractres</p>
                 <input type="text" id="guess-input" placeholder="Ingrese una palabra">
-                <button id="guess-button">Intentar</button>
+                <button id="guess-button">Adivinar</button>
             </div>
             <div id="contador">
-                <h1 id="intentado"></h1>
+                <h3 id="intentado"></h3>
+                <p id="guesses"></p>
             </div>
         </div>
         <div id="resultado">
@@ -22,17 +24,19 @@
                 <div id="grid"></div>
             </div>
             <div id="message">
-                <h1>Reglas del Juego</h1>
-                <p id="guesses">
-                    Adivina la palabra oculta en 6 intentos. Cada intento debe ser una palabra validá y si la palabra no existe el juego te avisará.
-                    Después de cada intento el color de las casillas cambia para mostrar qué tan cerca estás de acertar la palabra.
-                </p>
-                <ol>
-                    <li><span style="color: green; background-color:#08010c;">VERDE</span> significa que la letra está en la palabra y en la posición CORRECTA.</li>
-                    <li><span style="color:yellow; background-color:#29232d;">AMARILLO</span> significa que la letra letra está presente en la palabra pero en la posición INCORRECTA.</li>
-                    <li><span style="color:grey; background-color:#29232d;">GRIS</span> significa que la letra letra NO está presente en la palabra.</li>
-                </ol>
-                <button id="jugar">Jugar</button>
+                <div class="regla inicializado">
+                    <h1 class="inicializado">Reglas del Juego</h1>
+                    <p class="inicializado">
+                        Adivina la palabra oculta en 6 intentos, la palabra consta de 5 caracteres. Cada intento debe ser una palabra validá y unicamente podras adivinar cuando la palabra ingresada sea de 5 (cinco) caracteres.
+                        Después de cada intento el color de las casillas cambia para mostrar qué tan cerca estás de acertar la palabra.
+                    </p>
+                    <ol class="inicializado">
+                        <li><span style="color: green; background-color:#08010c;">VERDE</span> significa que la letra está en la palabra y en la posición CORRECTA.</li>
+                        <li><span style="color:yellow; background-color:#29232d;">AMARILLO</span> significa que la letra letra está presente en la palabra pero en la posición INCORRECTA.</li>
+                        <li><span style="color:grey; background-color:#29232d;">GRIS</span> significa que la letra letra NO está presente en la palabra.</li>
+                    </ol>
+                    <button class="inicializado" id="jugar">Jugar</button>
+                </div>
             </div>
         </div>
     </div>

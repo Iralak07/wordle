@@ -97,21 +97,34 @@ button:active {
     padding: 10px;
 }
 
-#reglas{
-    width: 100%;
-    margin-left: auto;
+.regla{
+    padding: 20px;
     box-sizing: border-box;
     margin-right: auto;
     display: block;
+    transform: translateY(-20%);
 }
 
 #jugar{
+    width: 200px;
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #72f681;
+    background-color: #23aa32;
     color:  #ffffff;
     border: none;
     border-radius: 10px;
+}
+
+.inicializado{
+    display: block;
+}
+
+#titulo{
+    font-size: 60px;
+}
+
+#adivinar{
+    display: none;
 }
