@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             INICIALIZADO.style.display = 'none';
             BUTTON.setAttribute('disabled',true);
             INPUT.value = ''
-            INPUT.placeholder = 'Ingrese palabra'
             INPUT.removeAttribute('disabled'); 
             INPUT.style.display = 'block';
             INPUT.focus();
