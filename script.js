@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         obtenerDatos().then(datos => {
             diccionario = datos;
             const palabra = diccionario[Math.floor(Math.random() * diccionario.length)].toUpperCase();
-            console.log(palabra);
 
             INPUT.addEventListener('input', (event)=>{
                 event.preventDefault();
