@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wordle</title>
+        <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+        <div id="intentos">
+            <div class="content">
+                <h1><span style="color: green">W</span><span style="color: yellow">o</span>r<span style="color: #A459D1 ">d</span><span>l</span><span style="color:green">e</span></h1>
+                <input type="text" id="guess-input" placeholder="Ingrese una palabra">
+                <button id="guess-button">Intentar</button>
+            </div>
+            <div id="contador">
+                <h1 id="intentado"></h1>
+            </div>
+        </div>
+        <div id="resultado">
+            <div class="content">
+                <div id="grid"></div>
+            </div>
+            <div id="message">
+                <h1>Reglas del Juego</h1>
+                <p id="guesses">
+                    Adivina la palabra oculta en 6 intentos. Cada intento debe ser una palabra validá y si la palabra no existe el juego te avisará.
+                    Después de cada intento el color de las casillas cambia para mostrar qué tan cerca estás de acertar la palabra.
+                </p>
+                <ol>
+                    <li><span style="color: green; background-color:#08010c;">VERDE</span> significa que la letra está en la palabra y en la posición CORRECTA.</li>
+                    <li><span style="color:yellow; background-color:#29232d;">AMARILLO</span> significa que la letra letra está presente en la palabra pero en la posición INCORRECTA.</li>
+                    <li><span style="color:grey; background-color:#29232d;">GRIS</span> significa que la letra letra NO está presente en la palabra.</li>
+                </ol>
+                <button id="jugar">Jugar</button>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
