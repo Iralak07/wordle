@@ -29,10 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((response) => response.json())
         .then((response) => {
           diccionario = response.filter((palabra) => palabra.length == 5);
-          palabra =
-            diccionario[
-              Math.floor(Math.random() * diccionario.length)
-            ].toUpperCase();
+          palabra =diccionario[Math.floor(Math.random() * diccionario.length)].toUpperCase();
         })
         .catch((err) => {
           console.log("Ha ocurrido un error");
@@ -83,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
           INPUT.style.display = "none";
           BUTTON.style.display = "none";
           document.getElementById("adivinar").style.display = "none";
-          document.getElementById("guesses").innerHTML = "<h2>Lo lamento, haz perdido!!<br>Vuelve a Intentarlo, presionando el boton volver a jugar!<h2>";
+          document.getElementById("guesses").innerHTML = `<h2>Lo lamento, haz perdido!!<br>La respuesta correcta es <span style="color: #A459D1 ">${palabra}</span>!<h2>`;
           BUTTON.setAttribute("disabled", true);
           BOTONGanador.style.display = 'block';
           CONTADOR.innerHTML = "";
@@ -102,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       function iniciar() {
         estado = ESTADOS.iniciado;
         controlarEstados(estado);
+        palabra =diccionario[Math.floor(Math.random() * diccionario.length)].toUpperCase();
         console.log('La palabra seleccionado aleatoriamente es: ', palabra)
       }
     
